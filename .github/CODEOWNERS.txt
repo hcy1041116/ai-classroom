@@ -1,0 +1,5 @@
+/frontend/        @AIPE02-team04/AI-classroom-frontend-leader
+/backend/         @AIPE02-team04/AI-classroom-backend-leader
+/infrastructure/  @AIPE02-team04/AI-classroom-backend-leader
+/docs/            @AIPE02-team04/AI-classroom-project-lead
+/prototypes/      @AIPE02-team04/AI-classroom-project-lead

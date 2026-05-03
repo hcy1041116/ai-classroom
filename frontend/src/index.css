@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Design System: Warm Earth Tones — Space Grotesk (headings) + Inter (body) */
+
+@layer base {
+  :root {
+    --background: 60 20% 98%; /* #FAF9F6 Warm Sand */
+    --foreground: 30 10% 22%; /* #3D3831 Dark Espresso */
+
+    --card: 0 0% 100%;
+    --card-foreground: 30 10% 22%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 30 10% 22%;
+
+    --primary: 12 69% 63%; /* #E07A5F Terracotta */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 150 25% 55%; /* #81B29A Sage Green */
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 45 30% 94%; /* Warm Beige */
+    --muted-foreground: 35 12% 51%; /* #706C61 */
+
+    --accent: 43 74% 75%; /* #F2CC8F Soft Gold */
+    --accent-foreground: 30 10% 22%;
+
+    --destructive: 0 40% 50%; /* #B54A4A */
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 40 20% 88%; /* #E5E2D9 */
+    --input: 40 20% 88%;
+    --ring: 12 69% 63%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 30 5% 11%; /* #1E1D1B Dark Espresso */
+    --sidebar-foreground: 45 15% 90%;
+    --sidebar-primary: 12 69% 63%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 30 10% 20%;
+    --sidebar-accent-foreground: 45 15% 95%;
+    --sidebar-border: 30 5% 15%;
+    --sidebar-ring: 12 69% 63%;
+
+    /* Radar Chart Colors */
+    --chart-1: 12 69% 63%; /* Terracotta */
+    --chart-2: 150 25% 55%; /* Sage Green */
+    --chart-3: 43 74% 75%; /* Soft Gold */
+    --chart-4: 200 40% 65%; /* Soft Blue */
+    --chart-5: 340 40% 65%; /* Soft Pink */
+
+    /* Motion Tokens */
+    --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-decelerate: cubic-bezier(0.0, 0, 0.2, 1);
+    --ease-accelerate: cubic-bezier(0.4, 0, 1, 1);
+    --duration-instant: 100ms;
+    --duration-prompt: 200ms;
+    --duration-smooth: 300ms;
+    --duration-deliberate: 500ms;
+  }
+
+  .dark {
+    --background: 30 10% 12%;
+    --foreground: 60 20% 98%;
+
+    --card: 30 10% 15%;
+    --card-foreground: 60 20% 98%;
+
+    --popover: 30 10% 15%;
+    --popover-foreground: 60 20% 98%;
+
+    --primary: 12 69% 63%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 150 25% 55%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 30 10% 20%;
+    --muted-foreground: 45 10% 65%;
+
+    --accent: 43 74% 75%;
+    --accent-foreground: 30 10% 12%;
+
+    --destructive: 0 40% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 30 10% 25%;
+    --input: 30 10% 25%;
+    --ring: 12 69% 63%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html, body, #root {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #FAF9F6; /* Fallback for HSL variables */
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer utilities {
+  .font-heading {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+
+  .chalk-dots {
+    background-image: radial-gradient(#E07A5F 1px, transparent 1px);
+    background-size: 24px 24px;
+    opacity: 0.08;
+  }
+
+  .chalk-lines {
+    background-image: linear-gradient(45deg, #E5E2D9 1px, transparent 1px);
+    background-size: 40px 40px;
+    opacity: 0.05;
+  }
+}
